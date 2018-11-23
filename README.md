@@ -2,11 +2,12 @@
 
 supported operator :
 ----
-* \+ do adding for two operands on the top of stack<br>
-* \- do subtracting for two operands on the top of stack<br>
-* \* do multipling for two operands on the top of stack<br>
-* \/ do dividing for two operands on the top of stack<br>
-* undo remove operand on the top of stack<br>
+* \+    do adding for two operands on the top of stack<br>
+* \-    do subtracting for two operands on the top of stack<br>
+* \*    do multipling for two operands on the top of stack<br>
+* \/    do dividing for two operands on the top of stack<br>
+* sqrt  square root for an operand on the top of stack<br>
+* undo  remove an operand on the top of stack<br>
 * clear clear stack<br>
 
 ## quit calculator
