@@ -2,7 +2,7 @@
 
 supported operator :
 ----
->> \+ do adding for two operands on the top of stack
+>> \+ do adding for two operands on the top of stack<br>
 >> \- do subtracting for two operands on the top of stack
 >> \* do multipling for two operands on the top of stack
 >> \/ do dividing for two operands on the top of stack
