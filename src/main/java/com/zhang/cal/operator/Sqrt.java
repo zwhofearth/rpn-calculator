@@ -15,9 +15,9 @@ public class Sqrt extends AbstractOperator {
 
 	@Override
 	protected void doExecute(CalculatorStack stack) throws Exception {
-		final BigDecimal p = stack.pop();
+		final BigDecimal p = stack.stack().pop();
 
 		BigDecimal r = BigDecimalMath.sqrt(p, stack.mathContext());
-		stack.push(r);
+		stack.stack().push(r);
 	}
 }

@@ -11,6 +11,6 @@ public class Undo extends AbstractOperator {
 
 	@Override
 	protected void doExecute(CalculatorStack stack) throws Exception {
-		stack.pop();
+		stack.stack().pop();
 	}
 }

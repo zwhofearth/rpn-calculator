@@ -13,9 +13,9 @@ public class Multiply extends AbstractOperator {
 
 	@Override
 	protected void doExecute(CalculatorStack stack) throws Exception {
-		final BigDecimal p1 = stack.pop();
-		final BigDecimal p2 = stack.pop();
+		final BigDecimal p1 = stack.stack().pop();
+		final BigDecimal p2 = stack.stack().pop();
 		final BigDecimal r = p2.multiply(p1, stack.mathContext());
-		stack.push(r);
+		stack.stack().push(r);
 	}
 }

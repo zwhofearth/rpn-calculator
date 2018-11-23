@@ -11,6 +11,6 @@ public class Clear extends AbstractOperator {
 
 	@Override
 	protected void doExecute(CalculatorStack stack) throws Exception {
-		stack.clear();
+		stack.stack().clear();
 	}
 }
