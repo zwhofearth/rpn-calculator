@@ -1,2 +1,2 @@
 #!/bin/bash
-java -classpath lib/*:. com.juqitech.order.job.JobExecutor -runMode cloud
+call java -jar calculator-0.0.1-SNAPSHOT.jar com.zhang.cal.Main

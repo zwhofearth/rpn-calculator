@@ -12,11 +12,11 @@ public interface Operator {
 	
 	static final String DEVIDE_FLAG = "/";
 	
-	static final String SQRT_FLAG = "+";
+	static final String SQRT_FLAG = "sqrt";
 	
-	static final String UNDO_FLAG = "+";
+	static final String UNDO_FLAG = "undo";
 	
-	static final String CLEAR_FLAG = "+";
+	static final String CLEAR_FLAG = "clear";
 	
 	String flag();
 	
