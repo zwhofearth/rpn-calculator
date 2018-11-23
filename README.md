@@ -1,7 +1,6 @@
 # rpn-calculator
 
 ## supported operator :
-----
 >> \+ do adding for two operands on the top of stack
 >> \- do subtracting for two operands on the top of stack
 >> \* do multipling for two operands on the top of stack
