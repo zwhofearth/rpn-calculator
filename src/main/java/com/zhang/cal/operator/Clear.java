@@ -1,5 +1,7 @@
 package com.zhang.cal.operator;
 
+import java.math.BigDecimal;
+
 import com.zhang.cal.CalculatorStack;
 
 public class Clear extends AbstractOperator {
@@ -10,7 +12,12 @@ public class Clear extends AbstractOperator {
 	}
 
 	@Override
-	protected void doExecute(CalculatorStack stack) throws Exception {
+	public int tuple() {
+		return Integer.MAX_VALUE;
+	}
+	
+	@Override
+	protected void doExecute(final CalculatorStack stack, final BigDecimal[] operands)  throws Exception {
 		stack.stack().clear();
 	}
 }

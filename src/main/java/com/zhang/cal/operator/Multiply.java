@@ -10,12 +10,18 @@ public class Multiply extends AbstractOperator {
 	public String flag() {
 		return Operator.MULTIPLY_FLAG;
 	}
+	
+	@Override
+	public int tuple() {
+		return 2;
+	}
 
 	@Override
-	protected void doExecute(CalculatorStack stack) throws Exception {
-		final BigDecimal p1 = stack.stack().pop();
-		final BigDecimal p2 = stack.stack().pop();
-		final BigDecimal r = p2.multiply(p1, stack.mathContext());
+	protected void doExecute(final CalculatorStack stack, final BigDecimal[] operands)  throws Exception {
+		
+		final BigDecimal p1 = operands[0];
+		final BigDecimal p2 = operands[1];
+		final BigDecimal r = p1.multiply(p2, stack.mathContext());
 		stack.stack().push(r);
 	}
 }

@@ -12,12 +12,20 @@ public class Sqrt extends AbstractOperator {
 	public String flag() {
 		return Operator.SQRT_FLAG;
 	}
+	
+	@Override
+	public int tuple() {
+		return 1;
+	}
 
 	@Override
-	protected void doExecute(CalculatorStack stack) throws Exception {
-		final BigDecimal p = stack.stack().pop();
-
-		BigDecimal r = BigDecimalMath.sqrt(p, stack.mathContext());
+	protected void doExecute(final CalculatorStack stack, final BigDecimal[] operands) throws Exception {
+		
+		final BigDecimal p = operands[0];
+		if(p.signum() == -1) {
+			throw new Exception("cannot sqrt a negative number");
+		}
+		final BigDecimal r = BigDecimalMath.sqrt(p, stack.mathContext());
 		stack.stack().push(r);
 	}
 }

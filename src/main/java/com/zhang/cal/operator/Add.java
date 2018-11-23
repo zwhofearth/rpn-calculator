@@ -12,12 +12,16 @@ public class Add extends AbstractOperator {
 	}
 
 	@Override
-	protected void doExecute(CalculatorStack stack) throws Exception {
+	public int tuple() {
+		return 2;
+	}
+	
+	@Override
+	protected void doExecute(final CalculatorStack stack, final BigDecimal[] operands)  throws Exception {
 
-		final BigDecimal p1 = stack.stack().pop();
-		final BigDecimal p2 = stack.stack().pop();
-		final BigDecimal r = p2.add(p1, stack.mathContext());
+		final BigDecimal p1 = operands[0];
+		final BigDecimal p2 = operands[1];
+		final BigDecimal r = p1.add(p2, stack.mathContext());
 		stack.stack().push(r);
 	}
-
 }

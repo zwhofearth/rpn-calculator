@@ -12,11 +12,16 @@ public class Divide extends AbstractOperator {
 	}
 
 	@Override
-	public void doExecute(CalculatorStack stack) throws Exception {
-		final BigDecimal p1 = stack.stack().pop();
-		final BigDecimal p2 = stack.stack().pop();
-		final BigDecimal r = p2.divide(p1, stack.mathContext());
+	public int tuple() {
+		return 2;
+	}
+	
+	@Override
+	protected void doExecute(final CalculatorStack stack, final BigDecimal[] operands)  throws Exception {
+
+		final BigDecimal p1 = operands[0];
+		final BigDecimal p2 = operands[1];
+		final BigDecimal r = p1.divide(p2, stack.mathContext());
 		stack.stack().push(r);
 	}
-
 }
